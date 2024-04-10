@@ -15,21 +15,21 @@ public class Vehicle {
      *
      * @param colour of the vehicle
     */
-    protected String colour = "";
+    private String colour = "";
 
     /**
      * Variables for the class.
      *
      * @param speed of the vehicle
     */
-    protected double speed;
+    private double speed;
 
     /**
      * Variables for the class.
      *
      * @param maxSpeed of the vehicle
     */
-    protected double maxSpeed;
+    private double maxSpeed;
 
     /**
      * Creates the base vehicle.
@@ -91,6 +91,15 @@ public class Vehicle {
     */
     public void setColour(String newColour) {
         this.colour = newColour;
+    }
+
+    /**
+     * Sets the speed of the vehicle.
+     *
+     * @param newSpeed of the vehicle
+    */
+    protected void setSpeed(double newSpeed) {
+        this.speed = newSpeed;
     }
 
     /**

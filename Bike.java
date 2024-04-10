@@ -1,6 +1,6 @@
 /*
 * This class creates a truck using methods from vehicles
-* 
+*
 * @author  Cristiano Sellitto
 * @version 1.0
 * @since   2024-04-09
@@ -44,9 +44,9 @@ public class Bike extends Vehicle {
     */
     public String getStatus() {
         final String lineBreak = "\n";
-        String status = " -> Speed: " + this.speed + lineBreak;
-        status += " -> MaxSpeed: " + this.maxSpeed + lineBreak;
-        status += " -> Color: " + this.colour + lineBreak;
+        String status = " -> Speed: " + this.getSpeed() + lineBreak;
+        status += " -> MaxSpeed: " + this.getMaxSpeed() + lineBreak;
+        status += " -> Color: " + this.getColour() + lineBreak;
         status += " -> Cadence: " + this.cadence + lineBreak;
 
         return status;
@@ -55,11 +55,11 @@ public class Bike extends Vehicle {
     /**
      * Sets the cadence of the bike.
      *
-     * @param newPlateNumber of the vehicle.
+     * @param newCadence of the bike
     */
     public void setCadence(double newCadence) {
         this.cadence = newCadence;
-        this.speed = newCadence + newCadence;
+        this.setSpeed(newCadence + newCadence);
     }
 
     /**
@@ -69,7 +69,7 @@ public class Bike extends Vehicle {
     */
     public void accelerate(double appliedNumber) {
         this.cadence = this.cadence + appliedNumber;
-        this.speed = this.speed + appliedNumber + appliedNumber;
+        this.setSpeed(this.getSpeed() + appliedNumber + appliedNumber);
     }
 
     /**

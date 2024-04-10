@@ -28,17 +28,22 @@ final class Stacks {
     * @param args No args will be used
     */
     public static void main(final String[] args) {
+        // Constants
+        final double speedMod = 10;
+        final double speedModTwo = 15;
+        final String newSpeedText = "New speed: ";
+
         // Add BMX bike
         final Bike bmx = new Bike("Red", 40);
         System.out.println("Created Bmx bike.\nStatus:");
         System.out.println(bmx.getStatus());
 
         System.out.println("\nSet the cadense to 10");
-        bmx.setCadence(10);
+        bmx.setCadence(speedMod);
         System.out.println(bmx.getStatus());
 
         System.out.println("\nAccelerate by 15:");
-        bmx.accelerate(15);
+        bmx.accelerate(speedModTwo);
         System.out.println(bmx.getStatus());
 
         System.out.println("\nRinging bell.");
@@ -51,16 +56,16 @@ final class Stacks {
         System.out.println(bigTruck.getStatus());
 
         System.out.println("\nAccelerating, 10 of power for ten seconds:");
-        bigTruck.accelerate(10, 10);
-        System.out.println("New speed: " + bigTruck.getSpeed());
+        bigTruck.accelerate(speedMod, speedMod);
+        System.out.println(newSpeedText + bigTruck.getSpeed());
 
         System.out.println("\nBreaking, 10 of power for 10 sec.");
-        bigTruck.accelerate(10, 10);
-        System.out.println("New speed: " + bigTruck.getSpeed());
+        bigTruck.accelerate(speedMod, speedMod);
+        System.out.println(newSpeedText + bigTruck.getSpeed());
 
         System.out.println("\nApplyed air pressure of 10:");
-        bigTruck.applyAir(10);
-        System.out.println("New speed: " + bigTruck.getSpeed());
+        bigTruck.applyAir(speedMod);
+        System.out.println(newSpeedText + bigTruck.getSpeed());
 
         // Show the program as done
         System.out.println("\nDone.");

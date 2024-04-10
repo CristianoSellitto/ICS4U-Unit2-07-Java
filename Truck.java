@@ -1,6 +1,6 @@
 /*
 * This class creates a truck using methods from vehicles
-* 
+*
 * @author  Cristiano Sellitto
 * @version 1.0
 * @since   2024-04-09
@@ -47,9 +47,9 @@ public class Truck extends Vehicle {
     */
     public String getStatus() {
         final String lineBreak = "\n";
-        String status = " -> Speed: " + this.speed + lineBreak;
-        status += " -> MaxSpeed: " + this.maxSpeed + lineBreak;
-        status += " -> Color: " + this.colour + lineBreak;
+        String status = " -> Speed: " + this.getSpeed() + lineBreak;
+        status += " -> MaxSpeed: " + this.getMaxSpeed() + lineBreak;
+        status += " -> Color: " + this.getColour() + lineBreak;
         status += " -> License Plate: " + this.licensePlateNumber + lineBreak;
 
         return status;
@@ -70,6 +70,6 @@ public class Truck extends Vehicle {
      * @param airPressure applied to the truck
     */
     public void applyAir(double airPressure) {
-        this.speed = this.speed - airPressure / 2;
+        this.setSpeed(this.getSpeed() - airPressure / 2);
     }
 }
